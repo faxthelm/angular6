@@ -1,0 +1,16 @@
+<div>
+  <table>
+    <thead>
+      <th *ngFor='let header of headers'>{{header}}</th>
+      <th>Options</th>
+    </thead>
+    <tbody>
+      <tr *ngFor='let formAnswer of answers, let i = index' class='answer{{i}}'>
+        <td *ngFor='let item of formAnswer.answer' >{{item}}</td>
+        <td>
+         <table-options [row]='i'></table-options>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

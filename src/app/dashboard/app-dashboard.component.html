@@ -1,0 +1,11 @@
+<div *ngIf='questions.length > 0'>
+    <h1>{{title}}</h1>
+    <div class='container'>
+        <div class='row'>
+            <dashboard-form [questions]='questions' (answerSubmitted)='onAnswerSubmitted($event)'></dashboard-form>
+        </div>
+        <div class='row'>
+            <dashboard-table [headers]='questions' [answers]='answers'></dashboard-table>
+        </div>
+    </div>
+</div>
